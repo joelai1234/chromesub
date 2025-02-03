@@ -72,14 +72,24 @@ export default function RootLayout({
                     ChromeSub
                   </Text>
                 </Group>
-                <Button
-                  component="a"
-                  href="https://chrome.google.com/webstore"
-                  variant="filled"
-                  color="primary.4"
-                >
-                  Add to Chrome
-                </Button>
+                <Group>
+                  <Button
+                    component="a"
+                    href="/pricing"
+                    variant="subtle"
+                    color="primary.8"
+                  >
+                    Pricing
+                  </Button>
+                  <Button
+                    component="a"
+                    href="https://chrome.google.com/webstore"
+                    variant="filled"
+                    color="primary.4"
+                  >
+                    Add to Chrome
+                  </Button>
+                </Group>
               </Group>
             </AppShellHeader>
 
