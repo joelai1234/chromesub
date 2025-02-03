@@ -10,8 +10,16 @@ import {
   Card,
   SimpleGrid,
   rem,
+  Stack,
 } from "@mantine/core";
-import { IconBadgeCc, IconUpload, IconSearch } from "@tabler/icons-react";
+import {
+  IconBadgeCc,
+  IconUpload,
+  IconSearch,
+  IconBrandGithub,
+  IconBrandTwitter,
+  IconMail,
+} from "@tabler/icons-react";
 import Image from "next/image";
 
 const features = [
@@ -154,6 +162,159 @@ export default function Home() {
             </Group>
           </Container>
         </div>
+
+        {/* Move footer inside AppShellMain */}
+        <footer className="bg-[var(--mantine-color-primary-8)] text-white">
+          <Container size="lg" py="xl">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {/* Brand Column */}
+              <div className="col-span-1">
+                <Group>
+                  <div className="w-8 h-8 bg-[var(--mantine-color-primary-4)] rounded-full"></div>
+                  <Text fw={700} size="lg">
+                    ChromeSub
+                  </Text>
+                </Group>
+                <Text size="sm" mt="md" opacity={0.8}>
+                  Enhance your video experience with AI-powered subtitles and
+                  advanced search capabilities.
+                </Text>
+              </div>
+
+              {/* Product Column */}
+              <div className="col-span-1">
+                <Text fw={700} mb="md">
+                  Product
+                </Text>
+                <Stack spacing="xs">
+                  <Text
+                    component="a"
+                    href="#"
+                    size="sm"
+                    opacity={0.8}
+                    className="hover:opacity-100"
+                  >
+                    Features
+                  </Text>
+                  <Text
+                    component="a"
+                    href="#"
+                    size="sm"
+                    opacity={0.8}
+                    className="hover:opacity-100"
+                  >
+                    Documentation
+                  </Text>
+                  <Text
+                    component="a"
+                    href="#"
+                    size="sm"
+                    opacity={0.8}
+                    className="hover:opacity-100"
+                  >
+                    Chrome Store
+                  </Text>
+                </Stack>
+              </div>
+
+              {/* Resources Column */}
+              <div className="col-span-1">
+                <Text fw={700} mb="md">
+                  Resources
+                </Text>
+                <Stack spacing="xs">
+                  <Text
+                    component="a"
+                    href="#"
+                    size="sm"
+                    opacity={0.8}
+                    className="hover:opacity-100"
+                  >
+                    Help Center
+                  </Text>
+                  <Text
+                    component="a"
+                    href="#"
+                    size="sm"
+                    opacity={0.8}
+                    className="hover:opacity-100"
+                  >
+                    Privacy Policy
+                  </Text>
+                  <Text
+                    component="a"
+                    href="#"
+                    size="sm"
+                    opacity={0.8}
+                    className="hover:opacity-100"
+                  >
+                    Terms of Service
+                  </Text>
+                </Stack>
+              </div>
+
+              {/* Contact Column */}
+              <div className="col-span-1">
+                <Text fw={700} mb="md">
+                  Contact
+                </Text>
+                <Stack spacing="xs">
+                  <Group spacing="xs">
+                    <IconMail size={16} />
+                    <Text
+                      component="a"
+                      href="mailto:support@chromesub.com"
+                      size="sm"
+                      opacity={0.8}
+                      className="hover:opacity-100"
+                    >
+                      support@chromesub.com
+                    </Text>
+                  </Group>
+                  <Group spacing="md" mt="md">
+                    <IconBrandGithub
+                      size={20}
+                      className="cursor-pointer hover:text-[var(--mantine-color-primary-4)]"
+                    />
+                    <IconBrandTwitter
+                      size={20}
+                      className="cursor-pointer hover:text-[var(--mantine-color-primary-4)]"
+                    />
+                  </Group>
+                </Stack>
+              </div>
+            </div>
+
+            {/* Copyright Bar */}
+            <div className="mt-16 pt-8 border-t border-white/10">
+              <Group justify="space-between">
+                <Text size="sm" opacity={0.8}>
+                  © 2024 ChromeSub. All rights reserved.
+                </Text>
+                <Group>
+                  <Text
+                    component="a"
+                    href="#"
+                    size="sm"
+                    opacity={0.8}
+                    className="hover:opacity-100"
+                  >
+                    Privacy
+                  </Text>
+                  <Text
+                    component="a"
+                    href="#"
+                    size="sm"
+                    opacity={0.8}
+                    className="hover:opacity-100"
+                  >
+                    Terms
+                  </Text>
+                </Group>
+              </Group>
+            </div>
+          </Container>
+        </footer>
       </AppShellMain>
     </AppShell>
   );
