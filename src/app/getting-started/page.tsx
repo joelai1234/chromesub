@@ -19,7 +19,7 @@ import {
 } from "@tabler/icons-react";
 
 type Step = {
-  icon: (props: any) => JSX.Element;
+  icon: typeof IconDownload;
   title: string;
   description: string;
   action?: {
