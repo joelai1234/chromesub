@@ -100,7 +100,7 @@ export default function RootLayout({
               {/* Footer */}
               <footer className="bg-[var(--mantine-color-primary-8)] text-white">
                 <Container size="lg" py="xl">
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Brand Column */}
                     <div className="col-span-1">
                       <Group>
@@ -115,105 +115,23 @@ export default function RootLayout({
                       </Text>
                     </div>
 
-                    {/* Product Column */}
-                    <div className="col-span-1">
-                      <Text fw={700} mb="md">
-                        Product
-                      </Text>
-                      <Stack>
-                        <Text
-                          component="a"
-                          href="#"
-                          size="sm"
-                          opacity={0.8}
-                          className="hover:opacity-100"
-                        >
-                          Features
-                        </Text>
-                        <Text
-                          component="a"
-                          href="#"
-                          size="sm"
-                          opacity={0.8}
-                          className="hover:opacity-100"
-                        >
-                          Documentation
-                        </Text>
-                        <Text
-                          component="a"
-                          href="#"
-                          size="sm"
-                          opacity={0.8}
-                          className="hover:opacity-100"
-                        >
-                          Chrome Store
-                        </Text>
-                      </Stack>
-                    </div>
-
-                    {/* Resources Column */}
-                    <div className="col-span-1">
-                      <Text fw={700} mb="md">
-                        Resources
-                      </Text>
-                      <Stack>
-                        <Text
-                          component="a"
-                          href="#"
-                          size="sm"
-                          opacity={0.8}
-                          className="hover:opacity-100"
-                        >
-                          Help Center
-                        </Text>
-                        <Text
-                          component="a"
-                          href="#"
-                          size="sm"
-                          opacity={0.8}
-                          className="hover:opacity-100"
-                        >
-                          Privacy Policy
-                        </Text>
-                        <Text
-                          component="a"
-                          href="#"
-                          size="sm"
-                          opacity={0.8}
-                          className="hover:opacity-100"
-                        >
-                          Terms of Service
-                        </Text>
-                      </Stack>
-                    </div>
-
                     {/* Contact Column */}
-                    <div className="col-span-1">
+                    <div className="col-span-1 md:text-right">
                       <Text fw={700} mb="md">
                         Contact
                       </Text>
                       <Stack>
-                        <Group>
+                        <Group justify="end">
                           <IconMail size={16} />
                           <Text
                             component="a"
-                            href="mailto:support@chromesub.com"
+                            href="mailto:developer@tokenbricks.com"
                             size="sm"
                             opacity={0.8}
                             className="hover:opacity-100"
                           >
-                            support@chromesub.com
+                            developer@tokenbricks.com
                           </Text>
-                        </Group>
-                        <Group mt="md">
-                          <IconBrandGithub
-                            size={20}
-                            className="cursor-pointer hover:text-[var(--mantine-color-primary-4)]"
-                          />
-                          <IconBrandTwitter
-                            size={20}
-                            className="cursor-pointer hover:text-[var(--mantine-color-primary-4)]"
-                          />
                         </Group>
                       </Stack>
                     </div>
@@ -223,28 +141,8 @@ export default function RootLayout({
                   <div className="mt-16 pt-8 border-t border-white/10">
                     <Group justify="space-between">
                       <Text size="sm" opacity={0.8}>
-                        © 2024 ChromeSub. All rights reserved.
+                        © 2025 ChromeSub. All rights reserved.
                       </Text>
-                      <Group>
-                        <Text
-                          component="a"
-                          href="#"
-                          size="sm"
-                          opacity={0.8}
-                          className="hover:opacity-100"
-                        >
-                          Privacy
-                        </Text>
-                        <Text
-                          component="a"
-                          href="#"
-                          size="sm"
-                          opacity={0.8}
-                          className="hover:opacity-100"
-                        >
-                          Terms
-                        </Text>
-                      </Group>
                     </Group>
                   </div>
                 </Container>
