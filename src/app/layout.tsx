@@ -20,6 +20,7 @@ import "./globals.css";
 import { breakpoints, colors } from "./theme";
 import { IconMail, IconBadgeCc } from "@tabler/icons-react";
 import Link from "next/link";
+import { MobileNav } from "./components/MobileNav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -74,7 +75,9 @@ export default function RootLayout({
                     </Text>
                   </Group>
                 </Link>
-                <Group>
+
+                {/* Desktop Navigation */}
+                <Group className="hidden md:flex">
                   <Link href="/getting-started" passHref legacyBehavior>
                     <Button component="a" variant="subtle" color="primary.8">
                       Getting Started
@@ -95,6 +98,9 @@ export default function RootLayout({
                     </Button>
                   </Link>
                 </Group>
+
+                {/* Mobile Navigation */}
+                <MobileNav />
               </Group>
             </AppShellHeader>
 
