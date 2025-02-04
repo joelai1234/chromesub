@@ -8,7 +8,12 @@ import {
   rem,
   Group,
 } from "@mantine/core";
-import { IconBadgeCc, IconUpload, IconSearch } from "@tabler/icons-react";
+import {
+  IconBadgeCc,
+  IconUpload,
+  IconSearch,
+  IconPlayerPlay,
+} from "@tabler/icons-react";
 
 const features = [
   {
@@ -100,9 +105,19 @@ export default function Home() {
           <Title order={2} ta="center" mb="xl" c="primary.8">
             See How It Works
           </Title>
-          <div className="aspect-video max-w-4xl mx-auto bg-white rounded-xl shadow-lg">
-            {/* Demo content placeholder */}
-          </div>
+          <Card shadow="sm" padding="xl" radius="md" className="bg-white">
+            <div className="aspect-video bg-[var(--mantine-color-primary-1)] rounded-md flex items-center justify-center">
+              <Group>
+                <IconPlayerPlay
+                  size={48}
+                  className="text-[var(--mantine-color-primary-4)]"
+                />
+                <Text size="lg" c="primary.8">
+                  Demo Video Coming Soon
+                </Text>
+              </Group>
+            </div>
+          </Card>
         </Container>
       </div>
 

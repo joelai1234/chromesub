@@ -18,11 +18,7 @@ import localFont from "next/font/local";
 import Head from "next/head";
 import "./globals.css";
 import { breakpoints, colors } from "./theme";
-import {
-  IconBrandGithub,
-  IconBrandTwitter,
-  IconMail,
-} from "@tabler/icons-react";
+import { IconMail, IconBadgeCc } from "@tabler/icons-react";
 import Link from "next/link";
 
 const geistSans = localFont({
@@ -37,8 +33,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Next App Mantine Tailwind Template",
-  description: "Next App Mantine Tailwind Template",
+  title: "ChromeSub",
+  description: "ChromeSub",
 };
 
 const theme = mergeMantineTheme(
@@ -69,13 +65,21 @@ export default function RootLayout({
               <Group className="h-full px-md justify-between">
                 <Link href="/" className="hover:no-underline">
                   <Group>
-                    <div className="w-10 h-10 bg-[var(--mantine-color-primary-4)] rounded-full"></div>
+                    <IconBadgeCc
+                      size={40}
+                      className="text-[var(--mantine-color-primary-4)]"
+                    />
                     <Text size="xl" fw={700} c="primary.8">
                       ChromeSub
                     </Text>
                   </Group>
                 </Link>
                 <Group>
+                  <Link href="/getting-started" passHref legacyBehavior>
+                    <Button component="a" variant="subtle" color="primary.8">
+                      Getting Started
+                    </Button>
+                  </Link>
                   <Link href="/pricing" passHref legacyBehavior>
                     <Button component="a" variant="subtle" color="primary.8">
                       Pricing

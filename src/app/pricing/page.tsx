@@ -31,9 +31,9 @@ const pricingPlans: PricingPlan[] = [
     pricePerToken: 1,
     features: [
       "20 AI subtitle generation tokens",
-      "Basic subtitle editing",
+      //   "Basic subtitle editing",
       "Export in SRT & VTT formats",
-      "30-day token validity",
+      //   "30-day token validity",
     ],
   },
   {
@@ -44,9 +44,9 @@ const pricingPlans: PricingPlan[] = [
     popular: true,
     features: [
       "50 AI subtitle generation tokens",
-      "Advanced subtitle editing",
+      //   "Advanced subtitle editing",
       "Export in all formats",
-      "60-day token validity",
+      //   "60-day token validity",
       "Priority support",
     ],
   },
@@ -152,9 +152,8 @@ export default function PricingPage() {
                 How long do tokens last?
               </Text>
               <Text size="sm" c="primary.8" opacity={0.8}>
-                Tokens are valid for 30-60 days from the date of purchase,
-                depending on your plan. Unused tokens will expire after this
-                period.
+                Tokens do not expire and will remain available for use
+                indefinitely, regardless of your plan.
               </Text>
             </Card>
           </SimpleGrid>
