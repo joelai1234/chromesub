@@ -118,7 +118,7 @@ export default function Home() {
           </Text>
           <Group justify="center">
             <Button size="xl" variant="white" c="primary.8">
-              Add to Chrome - It's Free
+              Add to Chrome - It&apos;s Free
             </Button>
           </Group>
         </Container>

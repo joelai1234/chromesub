@@ -23,6 +23,7 @@ import {
   IconBrandTwitter,
   IconMail,
 } from "@tabler/icons-react";
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -66,29 +67,29 @@ export default function RootLayout({
             {/* Header */}
             <AppShellHeader className="bg-white border-b border-[var(--mantine-color-primary-1)]">
               <Group className="h-full px-md justify-between">
+                <Link href="/" className="hover:no-underline">
+                  <Group>
+                    <div className="w-10 h-10 bg-[var(--mantine-color-primary-4)] rounded-full"></div>
+                    <Text size="xl" fw={700} c="primary.8">
+                      ChromeSub
+                    </Text>
+                  </Group>
+                </Link>
                 <Group>
-                  <div className="w-10 h-10 bg-[var(--mantine-color-primary-4)] rounded-full"></div>
-                  <Text size="xl" fw={700} c="primary.8">
-                    ChromeSub
-                  </Text>
-                </Group>
-                <Group>
-                  <Button
-                    component="a"
-                    href="/pricing"
-                    variant="subtle"
-                    color="primary.8"
-                  >
-                    Pricing
-                  </Button>
-                  <Button
-                    component="a"
+                  <Link href="/pricing" passHref legacyBehavior>
+                    <Button component="a" variant="subtle" color="primary.8">
+                      Pricing
+                    </Button>
+                  </Link>
+                  <Link
                     href="https://chrome.google.com/webstore"
-                    variant="filled"
-                    color="primary.4"
+                    passHref
+                    legacyBehavior
                   >
-                    Add to Chrome
-                  </Button>
+                    <Button component="a" variant="filled" color="primary.4">
+                      Add to Chrome
+                    </Button>
+                  </Link>
                 </Group>
               </Group>
             </AppShellHeader>
